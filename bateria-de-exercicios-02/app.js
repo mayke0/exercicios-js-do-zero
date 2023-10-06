@@ -34,7 +34,7 @@ Será que este array precisa ser declarado com a palavra-chave
 let?
 */
 
-let marca = ['Apple', 'Sony', 'Samsung', 'Microsoft']
+const marca = ["Apple", "Sony", "Samsung", "Microsoft"];
 
 /*
 02
@@ -47,12 +47,20 @@ Será que há alguma melhoria estrutural que pode ser feita?
 Você pode modificar a forma de declaração dos valores abaixo, 
 se necessário.
 */
-
-const nome = 'Friends'
-const temporadas = 10
-const episodios = 236
-const temaAbertura = `I'll Be There for You`
-const elencoPrincipal = ['Jennifer Aniston', 'Courteney Cox', 'Lisa Kudrow', 'Matt LeBlanc', 'Matthew Perry', 'David Schwimmer']
+const programa = {
+  nome: "Friends",
+  temporadas: 10,
+  episodios: 236,
+  temaAbertura: `I'll Be There for You`,
+  elencoPrincipal: [
+    "Jennifer Aniston",
+    "Courteney Cox",
+    "Lisa Kudrow",
+    "Matt LeBlanc",
+    "Matthew Perry",
+    "David Schwimmer",
+  ],
+};
 
 /*
 03
@@ -65,21 +73,14 @@ Será que a estrutura usada é ideal para organizar estas
 informações?
 */
 
-const frutas = {
-  fruta1: 'banana',
-  fruta2: 'maçã',
-  fruta3: 'pera',
-  fruta4: 'uva'
-}
+const frutas = ["banana", "maçã", "pera", "uva"];
 
 /*
 04
 
 Declare uma const banda e atribua a ela um objeto vazio.
 */
-
-
-
+const banda = {};
 /*
 05
 
@@ -92,8 +93,7 @@ Adicione no objeto banda uma propriedade nome.
 
 Atribua o valor 'Led Zeppelin' para a propriedade nome.
 */
-
-
+banda.nome = "Led Zeppelin";
 
 /*
 06
@@ -107,9 +107,7 @@ Dica:
 
 O tipo de valor da propriedade deve ser uma lista.
 */
-
-
-
+banda.generos = ["Hard rock", "Blues", "Rock-folk", "Rock", "Heavy Metal"];
 /*
 07
 
@@ -124,9 +122,7 @@ Dica:
 
 Use um boolean para indicar que a banda não está na ativa.
 */
-
-
-
+banda.estaNaAtiva = false
 /*
 08
 
@@ -151,7 +147,21 @@ O tipo de valor da propriedade albuns deve ser uma lista.
 
 O tipo de valor das propriedades capa deve ser uma string.
 */
+banda.albuns = [
+  {
+    nome:'Houses of the Holy',
+    ano: 1973,
+    capa: 'https://upload.wikimedia.org/wikipedia/en/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg',
+  
+  },
+  {
+    nome: 'Physical Graffiti',
+    ano: 1975,
+    capa: 'https://upload.wikimedia.org/wikipedia/en/e/e3/Led_Zeppelin_-_Physical_Graffiti.jpg',
 
+  },
+
+];
 
 
 /*
@@ -160,6 +170,7 @@ O tipo de valor das propriedades capa deve ser uma string.
 Abaixo deste comentário, modifique o valor da propriedade ano 
 do album Physical Graffiti para 1976.
 */
+banda.albuns[1].ano = 1976 
 
 
 
@@ -178,7 +189,7 @@ const pokemon = {
     {
       move: {
         name: "razor-wind",
-        url: "https://pokeapi.co/api/v2/move/13/"
+        url: "https://pokeapi.co/api/v2/move/13/",
       },
       versionGroupDetails: [
         {},
@@ -186,17 +197,19 @@ const pokemon = {
           levelLearnedAt: 0,
           moveLearnMethod: {
             name: "machine",
-            url: "https://pokeapi.co/api/v2/move-learn-method/4/"
+            url: "https://pokeapi.co/api/v2/move-learn-method/4/",
           },
           versionGroup: {
             name: "red-blue",
-            url: "https://pokeapi.co/api/v2/version-group/1/"
-          }
-        }
-      ]
-    }
-  ]
-}
+            url: "https://pokeapi.co/api/v2/version-group/1/",
+          },
+        },
+      ],
+    },
+  ],
+};
+const url1 = pokemon.moves[0].versionGroupDetails[1]
+console.log(url1.versionGroup.url);
 
 /*
 11
@@ -226,3 +239,6 @@ Dica:
 
 Use interpolações.
 */
+const paragrafo = `Nesta bateria de exercícios vimos que marca armazena um array no qual o segundo item é ${marca[1]}, um dos gêneros da banda ${banda.nome} é ${banda.generos[3]} e que a propriedade moveLearnMethod do Articuno contém um objeto com uma propriedade name que armazena ${url1.moveLearnMethod.name}.`
+
+console.log(paragrafo);

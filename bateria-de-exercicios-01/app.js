@@ -21,7 +21,7 @@ Vincule este arquivo (app.js) ao index.html desta mesma pasta.
 Conserte o nome da let abaixo.
 */
 
-let numero impar = 7
+//let numero_impar = 7
 
 /* 
 03
@@ -33,7 +33,7 @@ Não modifique a declaração da let.
 O código que você escrever deve estar abaixo deste comentário.
 */
 
-
+let numero_impar = 3;
 
 /*
 04
@@ -44,7 +44,8 @@ Após ver o valor da const no console, remova do código o comando
 que exibiu a const no console.
 */
 
-const meExiba = 123
+const meExiba = 123;
+console.log(meExiba);
 
 /*
 05
@@ -63,7 +64,7 @@ O nome correto da const (sem abreviação) será revelado na próxima
 aula. 
 */
 
-const np = 2
+const semAbreviacao = 2;
 
 /* 
 06
@@ -80,9 +81,9 @@ Dica: o ajuste deve ser feito apenas na linha da declaração de
 "videoGame". 
 */
 
-const videoGame = 'Xbox'
+let videoGame = "Xbox";
 
-videoGame = 'Playstation'
+videoGame = "Playstation";
 
 /*
 07
@@ -94,14 +95,14 @@ Após calcular o resultado em sua mente, exiba a const "final" no
 console para conferir se o valor que você imaginou está certo. 
 */
 
-const x = 0
-let y = 3
-let w = x
+const x = 0;
+let y = 3;
+let w = x;
 
-w = 15 - y
-y = 5
+w = 15 - y;
+y = 5;
 
-const final = x + y + 7 + w
+const final = x + y + 7 + w;
 
 /*
 08
@@ -109,7 +110,7 @@ const final = x + y + 7 + w
 Conserte a declaração da variável abaixo. 
 */
 
-umNumeroQualquer = 9
+const umNumeroQualquer = 9;
 
 /*
 09
@@ -139,7 +140,9 @@ Dica: use concatenação e sintaxe de acesso de caractere de string
 para gerar o valor da constante "sigla".
 */
 
-const curso = 'Curso de JavaScript Roger Melo'
+const curso = "Curso de JavaScript Roger Melo";
+const sigla= curso
+console.log(`"${sigla[0]}${sigla[9]}${sigla['13']}${sigla[20]}${sigla[25]}"`);
 
 /*
 10
@@ -147,8 +150,8 @@ const curso = 'Curso de JavaScript Roger Melo'
 Conserte o que está errado na string abaixo.
 */
 
-const likes = 197
-const mensagem = 'Sua foto recebeu ${likes} likes'
+const likes = 197;
+const mensagem = `Sua foto recebeu ${likes} likes`;
 
 /*
 11
@@ -165,7 +168,12 @@ Esta const deve armazenar um objeto com as seguintes propriedades:
 Os valores das propriedades acima ficam ao seu critério. Use uma 
 série que você curta =)
 */
-
+const serie = {
+  nome: "Lost",
+  temporada: 6,
+  episodios: 25,
+  emissora: "Prime",
+};
 
 
 /*
@@ -174,13 +182,20 @@ série que você curta =)
 Obtenha o valor de cada propriedade do objeto "serie" e exiba-o 
 no console.
 */
-
-
+// const{nome, temporada, episodios, emissora} = serie
+// console.log(nome, temporada, episodios, emissora);
 
 /*
 13
+
 
 Sobrescreva o valor de cada propriedade do objeto.
 
 Após sobrescrever, exiba o novo valor de cada uma no console.
 */
+serie.nome = 'seila'
+serie.temporada = 19
+serie.episodios = 200
+serie.emissora = 'globo'
+
+console.log(serie)  ;
