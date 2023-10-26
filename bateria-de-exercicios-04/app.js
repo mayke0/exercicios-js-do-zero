@@ -125,20 +125,20 @@ Senão, atribua a pontuacao o valor que ela tem somado a 100.
 
 Na última linha dentro do bloco da função, retorne pontuacao.
 */
-const pegaPontuacao = (respostasUsuario) => {
-    const ultimaResposta = respostasUsuario[3];
-    let pontuacao = 0;
+// const pegaPontuacao = (respostasUsuario) => {
+//     const ultimaResposta = respostasUsuario[3];
+//     let pontuacao = 0;
   
-    if (ultimaResposta === 'A') {
-      pontuacao += 50;
-    } else if (ultimaResposta === 'C') {
-      pontuacao += 25;
-    } else {
-      pontuacao += 100;
-    }
+//     if (ultimaResposta === 'A') {
+//       pontuacao += 50;
+//     } else if (ultimaResposta === 'C') {
+//       pontuacao += 25;
+//     } else {
+//       pontuacao += 100;
+//     }
   
-    return pontuacao;
-  }
+//     return pontuacao;
+//   }
   
 
 /*
@@ -151,6 +151,9 @@ Invoque pegaPontuacao e passe respostasUsuario como argumento.
 
 A invocação de pegaPontuacao deve retornar 100.
 */
+const respostasUsuario = pegaRespostasUsuario()
+
+// pegaPontuacao(respostasUsuario)
 
 /*
 09
@@ -167,3 +170,17 @@ else if ou else.
 O único requisito para você usar return é ele estar dentro de uma 
 função.
 */
+const pegaPontuacao = (respostasUsuario) => {
+  const ultimaResposta = respostasUsuario[3];
+  let pontuacao = 0;
+
+  if (ultimaResposta === 'A') 
+   return pontuacao += 50;
+  
+  if (ultimaResposta === 'C') 
+   return pontuacao += 25;
+
+  return pontuacao += 100;
+  
+}
+console.log(pegaPontuacao(respostasUsuario));
