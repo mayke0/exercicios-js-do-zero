@@ -15,8 +15,7 @@ Mas arrow function é mais legal 😉
 Crie uma função que recebe dois parâmetros e retorna o resultado 
 da multiplicação deles.
 */
-
-
+const multiplicaçãoDeles = (a, b) => a * b;
 
 /*
 02
@@ -31,8 +30,12 @@ os números do objeto.
 
 A invocação da função deve retornar 21.
 */
+const objetos = {
+  propriedade1: 7,
+  propriedade2: 3,
+};
 
-
+// console.log(multiplicaçãoDeles(objetos.propriedade1, objetos.propriedade2));
 
 /*
 03
@@ -46,9 +49,8 @@ argumentos os números do array.
 
 A invocação da função deve retornar 35.
 */
-
-
-
+const itens = [5, 7];
+// console.log(multiplicaçãoDeles(itens[0], itens[1]));
 /*
 04
 
@@ -64,8 +66,9 @@ em consts.
 A invocação da função que você criou no exercício 01 deve 
 retornar 27.
 */
-
-
+const pegaNumerosImpares = () => [5, 3, 9];
+const numeros = pegaNumerosImpares();
+// console.log(multiplicaçãoDeles(numeros[1], numeros[2]));
 
 /*
 05
@@ -88,17 +91,16 @@ Não armazene os retornos da invocação de pegaObj em consts.
 A invocação da função que você criou no exercício 01 deve 
 retornar 12.
 */
-
-
-
+const pegaObj = () => [{ numero: 2 }, { numero: 4 }, { numero: 6 }];
+const obj = pegaObj();
+// console.log(multiplicaçãoDeles(obj[0].numero, obj[2].numero));
 /*
 06
 
 Crie uma função pegaRespostasUsuario que retorna um array com os 
 itens 'A', 'B', 'A' e 'D'.
-*/
-
-
+*/ const pegaRespostasUsuario = () => ["A", "B", "A", "D"];
+// console.log(pegaRespostasUsuario());
 
 /*
 07
@@ -123,8 +125,21 @@ Senão, atribua a pontuacao o valor que ela tem somado a 100.
 
 Na última linha dentro do bloco da função, retorne pontuacao.
 */
-
-
+const pegaPontuacao = (respostasUsuario) => {
+    const ultimaResposta = respostasUsuario[3];
+    let pontuacao = 0;
+  
+    if (ultimaResposta === 'A') {
+      pontuacao += 50;
+    } else if (ultimaResposta === 'C') {
+      pontuacao += 25;
+    } else {
+      pontuacao += 100;
+    }
+  
+    return pontuacao;
+  }
+  
 
 /*
 08
@@ -136,8 +151,6 @@ Invoque pegaPontuacao e passe respostasUsuario como argumento.
 
 A invocação de pegaPontuacao deve retornar 100.
 */
-
-
 
 /*
 09
